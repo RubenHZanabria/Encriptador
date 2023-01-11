@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html>
+<head>
+        <meta charset="UTF-8">
+        <title>Encriptacion de extremo a extremo</title>
+        <link rel="stylesheet" href="reset.css">
+        <link rel="stylesheet" href="style.css">
+    </head>
+<body>
+
+
+
+
+
+
+<main>  
+
+<ul class="AreaM">
+
+        <img src="imagenes/Logo-2.png"><br>
+              
+          <li>
+               <textarea  id="mensaje" class="texto2" required="" placeholder="Escribe m e n s a j e" "="" font-size= 60pt;  ></textarea>
+
+
+                <input  id="envia" type="submit"  value="Enviar Encriptando" class="enviar">
+          </li> 
+          
+       
+
+          <li>
+       
+            <textarea   id="mensaje2" class="texto2" required="" placeholder="E n c r i p t a d o" =""="" font-size= 60pt;  ></textarea>
+
+            <input  id ="copiar"type="submit" value="Copiar" class="enviar"  >
+
+            <textarea  id="mensaje3" class="texto2" required="" placeholder="D e s e n c r i p t a d o" =""="" font-size= 60pt; ></textarea>
+
+            <input  id ="pegar" type="submit" value="Pegar y Desencriptar" class="enviar" >
+          </li>
+      
+
+            </ul>
+
+
+
+
+
+            <script>
+//var texto = "A la abeja semejante, para que cause placer, el epigrama ha de ser: pequeño, dulce y punzante.";
+      
+          
+           
+            
+        //  console.log(
+             
+           //  texto.replace(/([i])/g, function(encontrado) {
+           //  return "imes" + encontrado 
+             
+          //   })
+         //     );
+  //
+/*La letra "e" es convertida para "enter"
+La letra "i" es convertida para "imes"
+La letra "a" es convertida para "ai"
+La letra "o" es convertida para "ober"
+La letra "u" es convertida para "ufat"
+*/
+
+//var str = "Ele gato.";
+
+
+ //function myMsj(){
+ // console.log("hola")
+// }
+
+var saludo;
+
+var enviar = document.getElementById('envia')
+enviar.addEventListener('click', function() {
+
+
+var limpia2 = document.getElementById('mensaje3')
+           var limpio2 = "";
+            limpia2.innerHTML = limpio2;
+
+ var x = document.getElementById('mensaje2');
+ var y = document.getElementById('copiar');
+ 
+
+  x.style = ('display: block');
+  y.style = ('display: block');
+
+var limpia = document.getElementById('mensaje2')
+           var limpio = "";
+            limpia.innerHTML = limpio;
+
+
+var str=document.getElementById('mensaje').value;
+var mapObj = {
+   a:"ai",
+   e:"\n",
+   i:"imes",
+   o:"ober",
+   u:"ufat",
+   
+
+};
+
+
+
+str = str.replace(/a|e|i|o|u/g, function(matched){
+  return mapObj[matched];
+});
+
+//console.log(str)
+
+
+var area = document.getElementById('mensaje2')
+ saludo = str;
+  //console.log("hola")
+  area.innerHTML = saludo;
+
+ //alert('Gracias por pinchar');
+
+})
+
+
+
+        var copy = document.getElementById('copiar')
+        copy.addEventListener('click', function() {
+
+
+var cop =saludo+"todotuyo";
+ 
+          console.log(cop+"copiarxx")
+
+var a = document.getElementById('mensaje3');
+ var b = document.getElementById('pegar');
+ 
+
+  a.style = ('display: block');
+  b.style = ('display: block');
+
+
+
+})
+
+
+
+
+//function myEncripto(){
+//var str2 = "El gaitober."+"\n"+" el gaitober.";
+//var str2=document.getElementById('mensaje').value;
+
+
+var encrip = document.getElementById('pegar')
+        encrip.addEventListener('click', function() {
+
+         var limpia = document.getElementById('mensaje2')
+           var limpio = "";
+            limpia.innerHTML = limpio;
+            
+
+
+var str2=saludo;
+var mapObj2 = {
+   ai:"a",
+ "\n":"e",
+   imes:"i",
+   ober:"o",
+   ufat:"u",
+   
+
+};
+
+
+str2 = str2.replace(/ai|\n|imes|ober|ufat/g, function(matched2){
+  return mapObj2[matched2];
+});
+
+console.log(str2+"pegar")
+
+
+
+var areax = document.getElementById('mensaje3')
+ let mensajeD = str2;
+  //console.log("hola")
+  areax.innerHTML = str2;
+
+          
+
+
+          var limpia4 = document.getElementById('mensaje')
+           var limpio4 = area;
+            limpia4.innerHTML = limpio4;
+ 
+
+ })
+
+
+           
+</script>
+<footer>
+            <img src="imagenes/Logo-2.png"alt="Logo" style="height: 60px; width: 206px; margin: 5% 5% 3% 3% ;"  >
+            <p class="copyright"><div style="text-indent: 30px;">&copy C o p y r i g h t  <br /> Mensajeria  Diamante <br /> </div>2022 &#128557;  </p>
+
+
+
+  </footer>
+</main>
+</body>
+
+</html>
+            

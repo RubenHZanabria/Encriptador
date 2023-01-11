@@ -1,0 +1,223 @@
+
+
+
+header {
+    background-color: #BBBBBB;
+    padding: 80px 0;
+}
+
+body {
+
+    font-family: 'Rubik Vinyl', cursive;
+    background-color: skyblue; 
+
+}
+
+ 
+
+
+main{
+      
+}
+
+.texto2{
+    display: block;
+    margin: 0 0 30px;
+    padding: 20px 25px;
+    width: 100%;
+    font-size: 16pt;
+    color: darkred;
+    font-weight:300 ;
+    background:  url(imagenes/diamod.png) ;
+   background-size : 1px  1px;  
+}
+
+
+
+.checkbox{
+    margin:20px 0;
+}
+
+
+
+
+.AreaM{
+    display:inline-block;
+    background:  url(imagenes/muñeco.png) ;
+     
+    background-size : 150px  150px;
+    backface-visibility: revert-layer;
+    width: 1330px;
+   height: 600px;
+    padding: 7px 7px ;
+
+    
+   
+    
+    
+}
+
+
+.AreaM li{
+    
+    display:inline-block;
+    text-align: center;
+    width: 40% ;
+   vertical-align: top;
+
+  margin: 2.5% 0.5% 1.5% 1.5% ;
+    padding: 5px 0px 10px 10px;
+   //box-sizing: border-box;
+     border: 6px solid black;
+
+     border-radius: 20px 20px 20px 20px;
+}
+
+
+
+.AreaM li:hover{
+        
+        border-color: green;
+        font-size: 63px   ;
+
+
+    background:  url(imagenes/muñeco.png) ;
+      
+   
+
+}
+
+
+
+
+
+
+
+.AreaM li:hover {
+
+     font-size: 35px;
+
+ }
+
+
+ footer{
+
+  
+  display: inline-block;
+   
+    font-size: 17pt;
+    color: darkblue;
+     text-align: center;
+
+
+        background: url(imagenes/diamod.png) ;
+        
+    width: 1330px;
+    height: 400px;
+
+    margin: 40px 10px 10px;
+  
+   
+
+         }
+ 
+
+ .Copyright{
+
+
+
+    color:#FFFFFF;
+    
+
+        
+ }
+main{
+      
+}
+
+
+.enviar{
+
+    width:58%;
+
+    padding: 18px;
+
+    font-size: 19px;
+    font-weight: bold;
+    color: white;
+    border-radius: 20px ;
+    background: orange;
+    border-radius: 6px;
+    border: none;
+    transition: 1.3s all;
+    cursor:pointer;
+
+}
+
+
+.enviar:hover{
+
+
+    background: red;
+    transform: scale(0.9);
+    
+
+
+}
+
+
+#mensaje {
+
+  height: 92px; width: 460px ;
+  
+}
+
+ 
+#mensaje2 {
+  display: none;
+  height: 112px; width: 460px ;
+  
+}
+
+#copiar{
+  display: none;
+  height: 62px; width: 257px; margin: 4% 5% 5% 15% ;
+}
+
+
+
+#pegar {
+  display: none;
+height: 62px; width: 257px; margin: 5% 3% 5% 15% ;
+}
+
+#mensaje3 {
+display: none;
+height: 112px; width: 460px;
+}
+
+
+
+
+@media screen and (max-width:480px){
+    footer{
+       width: 1330px;
+       height: 400px;
+    margin: 40px 10px 10px;
+    }
+    
+    .AreaM{
+        width: auto;
+    }
+
+    .videoCentrado{
+        width: auto;
+
+    }
+    .listaDiferenciales,.imagenDiferenciales{
+        width: 100%;
+    }
+
+
+}
+
