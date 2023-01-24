@@ -6,47 +6,39 @@
         <link rel="stylesheet" href="reset.css">
         <link rel="stylesheet" href="style.css">
     </head>
-<body>
+        <body>
 
 
+            <main>  
 
+            <ul class="AreaM">
 
-
-
-<main>  
-
-<ul class="AreaM">
-
-        <img src="imagenes/Logo-2.png"><br>
+            <img src="imagenes/Logo-2.png"><br>
               
-          <li>
-               <textarea  id="mensaje" class="texto2" required="" placeholder="Escribe m e n s a j e" "="" font-size= 60pt;  ></textarea>
+                  <li>
+                   <textarea  id="mensaje" class="texto2" required="" placeholder="Escribe m e n s a j e" "="" font-size= 60pt;  ></textarea>
 
 
-                <input  id="envia" type="submit"  value="Enviar Encriptando" class="enviar">
-          </li> 
+                    <input  id="envia" type="submit"  value="Enviar Encriptando" class="enviar">
+                  </li> 
           
        
 
-          <li>
+                   <li>
        
-            <textarea   id="mensaje2" class="texto2" required="" placeholder="E n c r i p t a d o" =""="" font-size= 60pt;  ></textarea>
+                      <textarea   id="mensaje2" class="texto2" required="" placeholder="E n c r i p t a d o" =""="" font-size= 60pt;  ></textarea>
 
-            <input  id ="copiar"type="submit" value="Copiar" class="enviar"  >
+                      <input  id ="copiar"type="submit" value="Copiar" class="enviar"  >
 
-            <textarea  id="mensaje3" class="texto2" required="" placeholder="D e s e n c r i p t a d o" =""="" font-size= 60pt; ></textarea>
+                      <textarea  id="mensaje3" class="texto2" required="" placeholder="D e s e n c r i p t a d o" =""="" font-size= 60pt; ></textarea>
 
-            <input  id ="pegar" type="submit" value="Pegar y Desencriptar" class="enviar" >
-          </li>
+                      <input  id ="pegar" type="submit" value="Pegar y Desencriptar" class="enviar" >
+                   </li>
       
 
-            </ul>
+                    </ul>
 
-
-
-
-
-            <script>
+                    <script>
 
           
            
@@ -63,7 +55,7 @@ La letra "u" es convertida para "ufat"
 
 
 var saludo;
-
+var cop;
 var enviar = document.getElementById('envia')
 enviar.addEventListener('click', function() {
 
@@ -101,15 +93,15 @@ str = str.replace(/a|e|i|o|u/g, function(matched){
   return mapObj[matched];
 });
 
-//console.log(str)
+
 
 
 var area = document.getElementById('mensaje2')
  saludo = str;
-  //console.log("hola")
+  
   area.innerHTML = saludo;
 
- //alert('Gracias por pinchar');
+ 
 
 })
 
@@ -119,9 +111,12 @@ var area = document.getElementById('mensaje2')
         copy.addEventListener('click', function() {
 
 
-var cop =saludo+"todotuyo";
+
  
-          console.log(cop+"copiarxx")
+        
+
+
+cop = document.getElementById('mensaje2').value
 
 var a = document.getElementById('mensaje3');
  var b = document.getElementById('pegar');
@@ -137,17 +132,18 @@ var a = document.getElementById('mensaje3');
 
 
 
-
 var encrip = document.getElementById('pegar')
         encrip.addEventListener('click', function() {
 
+
          var limpia = document.getElementById('mensaje2')
+         
            var limpio = "";
             limpia.innerHTML = limpio;
             
+           
 
-
-var str2=saludo;
+var str2=cop;
 var mapObj2 = {
    ai:"a",
  "\n":"e",
@@ -169,7 +165,7 @@ console.log(str2+"pegar")
 
 var areax = document.getElementById('mensaje3')
  let mensajeD = str2;
-  //console.log("hola")
+
   areax.innerHTML = str2;
 
           
@@ -185,15 +181,12 @@ var areax = document.getElementById('mensaje3')
 
            
 </script>
-<footer>
+            <footer>
             <img src="imagenes/Logo-2.png"alt="Logo" style="height: 60px; width: 206px; margin: 5% 5% 3% 3% ;"  >
             <p class="copyright"><div style="text-indent: 30px;">&copy C o p y r i g h t  <br /> Mensajeria  Diamante <br /> </div>2022 &#128557;  </p>
 
-
-
-  </footer>
+            </footer>
 </main>
 </body>
 
 </html>
-            
